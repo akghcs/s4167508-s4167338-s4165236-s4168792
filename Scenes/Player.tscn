@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dcry4dvyucljb"]
 
+[ext_resource type="Script" uid="uid://c7ctl1g4hule5" path="res://Scenes/player.gd" id="1_gntrk"]
 [ext_resource type="Script" uid="uid://c3aem04dgi44w" path="res://Character/character_body_2d.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://38pyuepvnehf" path="res://Character/icon.svg" id="2_gntrk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tr2i4"]
 
 [node name="Node2D" type="Node2D" unique_id=270120909]
+script = ExtResource("1_gntrk")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=982330504]
 script = ExtResource("1_kyqiw")
@@ -16,3 +18,9 @@ shape = SubResource("CircleShape2D_tr2i4")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1151313887]
 position = Vector2(309, 357)
 texture = ExtResource("2_gntrk")
+
+[node name="leftmuzzle" type="Marker2D" parent="." unique_id=738526237]
+position = Vector2(271, 296)
+
+[node name="rightmuzzle" type="Marker2D" parent="." unique_id=407239900]
+position = Vector2(346, 297)

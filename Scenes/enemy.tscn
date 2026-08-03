@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://by5l81l662mgf"]
+
+[ext_resource type="Texture2D" uid="uid://c6u51p8ycdo8f" path="res://enemy/palceholder.png" id="1_7k104"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x15ge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7k104")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwxsa"]
+size = Vector2(73, 76)
+
+[node name="enemy" type="CharacterBody2D" unique_id=819992763]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=421415500]
+position = Vector2(225, 276)
+scale = Vector2(0.16672209, 0.16875717)
+sprite_frames = SubResource("SpriteFrames_x15ge")
+animation = &"normal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1447333533]
+position = Vector2(225, 276)
+shape = SubResource("RectangleShape2D_bwxsa")

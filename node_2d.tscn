@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjxflwcgpmk56"]
+[gd_scene format=3 uid="uid://bjxflwcgpmk56"]
 
 [ext_resource type="Script" uid="uid://cscyxo17ghh3f" path="res://node_2d.gd" id="1_kdubu"]
 [ext_resource type="Texture2D" uid="uid://45vt3fgpk73q" path="res://Background/BackgroundVisuals/a-celestial-background-features-numerous-stars-sparkling-against-a-dark-to-light-purple-evening-sky-photo.jpg" id="1_q6r6c"]

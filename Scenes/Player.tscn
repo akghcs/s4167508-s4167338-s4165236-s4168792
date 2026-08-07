@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7ctl1g4hule5" path="res://Scenes/player.gd" id="1_gntrk"]
 [ext_resource type="Script" uid="uid://c3aem04dgi44w" path="res://Character/character_body_2d.gd" id="1_kyqiw"]
-[ext_resource type="Texture2D" uid="uid://38pyuepvnehf" path="res://Character/icon.svg" id="2_gntrk"]
+[ext_resource type="Texture2D" uid="uid://darysaw5rbqpg" path="res://Character/13-138961_vector-spaces-ship-8-bit-spaceship-sprite.png" id="3_gntrk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tr2i4"]
 
@@ -12,12 +12,13 @@ script = ExtResource("1_gntrk")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=982330504]
 script = ExtResource("1_kyqiw")
 
+[node name="13138961VectorSpacesShip8BitSpaceshipSprite" type="Sprite2D" parent="CharacterBody2D" unique_id=1692232606]
+position = Vector2(302.99997, 622)
+scale = Vector2(0.067073174, 0.096059114)
+texture = ExtResource("3_gntrk")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=868512664]
 shape = SubResource("CircleShape2D_tr2i4")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1151313887]
-position = Vector2(309, 357)
-texture = ExtResource("2_gntrk")
 
 [node name="leftmuzzle" type="Marker2D" parent="." unique_id=738526237]
 position = Vector2(271, 296)

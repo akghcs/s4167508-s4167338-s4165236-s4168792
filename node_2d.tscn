@@ -9,8 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://csyhr86dctdca" path="res://Background/BackgroundVisuals/1-16577_twinkle-stars-png-transparent.png" id="8_4d7sh"]
 [ext_resource type="PackedScene" uid="uid://by5l81l662mgf" path="res://Scenes/enemy.tscn" id="8_rj586"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x15ge"]
+size = Vector2(599, 88)
+
 [node name="Node2D" type="Node2D" unique_id=299655436]
 script = ExtResource("1_kdubu")
+enemy_to_spawn = ExtResource("8_rj586")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1571021637]
 
@@ -86,5 +90,13 @@ position = Vector2(298.00003, 211)
 scale = Vector2(1.3487476, 1.8017491)
 texture = ExtResource("8_4d7sh")
 
-[node name="enemy" parent="." unique_id=5410016 instance=ExtResource("8_rj586")]
-position = Vector2(283, 193)
+[node name="EnemySpawner" type="Area2D" parent="." unique_id=897735657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySpawner" unique_id=510243747]
+position = Vector2(298, -68)
+shape = SubResource("RectangleShape2D_x15ge")
+
+[node name="spawn timer" type="Timer" parent="." unique_id=37316713]
+autostart = true
+
+[connection signal="timeout" from="spawn timer" to="." method="_on_spawn_timer_timeout"]

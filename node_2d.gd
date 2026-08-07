@@ -19,3 +19,7 @@ func _on_spawn_timer_timeout():
 	var e = enemy_to_spawn.instantiate()
 	e.position = Vector2(x,y)
 	call_deferred("add_child", e)
+	
+
+func _on_enemy_despawner_body_entered(body):
+	body.queue_free()

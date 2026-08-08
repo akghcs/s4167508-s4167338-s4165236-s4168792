@@ -5,6 +5,11 @@ extends CharacterBody2D
 func input():
 	var input_direction = Input.get_vector("left","right","up","down")
 	velocity = input_direction * speed
+
+#shooting logic
+if Input.is_action_is_pressed("shoot"):
+	pass
+	
 	
 func _physics_process(delta):
 	input()

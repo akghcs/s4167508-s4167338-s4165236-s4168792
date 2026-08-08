@@ -12,5 +12,4 @@ func _process(delta):
 func _physics_process(delta):
 	velocity = direction.normalized() * speed
 	look_at(position + velocity)
-	rotation += PI / 2
 	move_and_collide(velocity * delta)

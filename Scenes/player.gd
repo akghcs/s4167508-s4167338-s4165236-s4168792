@@ -1,11 +1,5 @@
-extends CharacterBody2D
+extends Node2D
 
-@export var speed = 400
 
-func input():
-	var input_direction = Input.get_vector("left","right","up","down")
-	velocity = input_direction * speed
-	
-func _physics_process(delta):
-	input()
-	move_and_slide()
+func _ready() -> void:
+	pass # Replace with function body.
